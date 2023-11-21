@@ -1,0 +1,1287 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://localhost:9000/StudentProfile"
+         xmlns="http://localhost:9000/StudentProfile#"
+         xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+         xmlns:Stud="http://localhost:9000/Student#">
+
+<owl:Ontology rdf:about="http://localhost:9000/StudentProfile">
+  <owl:imports rdf:resource="http://localhost:9000/Itinerary.owl"/>
+  <owl:imports rdf:resource="http://localhost:9000/LearningGoal.owl"/>
+  <owl:imports rdf:resource="http://localhost:9000/PreviousExperience.owl"/>
+  <owl:imports rdf:resource="http://localhost:9000/PreviousKnowledge.owl"/>
+  <owl:imports rdf:resource="http://localhost:9000/Residence.owl"/>
+  <owl:imports rdf:resource="http://localhost:9000/Student.owl"/>
+  <owl:imports rdf:resource="http://localhost:9000/StudentType.owl"/>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="http://localhost:9000/Student#HasA">
+  <rdfs:domain rdf:resource="http://localhost:9000/Student#Student"/>
+  <rdfs:range rdf:resource="#StudentProfile"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#HasExp">
+  <rdfs:domain rdf:resource="#StudentProfile"/>
+  <rdfs:range rdf:resource="http://localhost:9000/PreviousExperience#PreviousExperience"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#HasGoals">
+  <rdfs:domain rdf:resource="#StudentProfile"/>
+  <rdfs:range rdf:resource="http://localhost:9000/LearningGoal#LearningGoal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#HasKnowledge">
+  <rdfs:domain rdf:resource="#StudentProfile"/>
+  <rdfs:range rdf:resource="http://localhost:9000/PreviousKnowledge#PreviousKnowledge"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#HasResidence">
+  <rdfs:domain rdf:resource="#StudentProfile"/>
+  <rdfs:range rdf:resource="http://localhost:9000/Residence#Residence"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#HasStudentType">
+  <rdfs:domain rdf:resource="#StudentProfile"/>
+  <rdfs:range rdf:resource="http://localhost:9000/StudentType#StudentType"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#RecommendsOne">
+  <rdfs:domain rdf:resource="#StudentProfile"/>
+  <rdfs:range rdf:resource="http://localhost:9000/Itinerary#Itinerary"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#StudentProfile"/>
+
+<owl:NamedIndividual rdf:about="#student001">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile001"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Javier Andres Valencia</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1130615164</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">javiervalencia31@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile001">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Intermediate"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student002">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile002"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mónica patricia rivera peteche</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067523251</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> monicarivera446@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile002">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary003"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary001"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary005"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student003">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile003"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yurany Yesenia Orozco Zambrano </Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1064431832</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yurany281990@gmail.com </Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile003">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Intermediate"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student004">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile004"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iván Fernando Silva Noscué</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067526500</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fersimusic@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile004">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student005">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile005"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">José Israel Patiño Caviedes</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1075293796</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">patinoj.1102@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile005">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#False"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student006">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile006"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALEXANDRA NOGUERA MESA</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34609664</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">noguermesa@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile006">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student007">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile007"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosby Edith Pito</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25733486</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edithpito@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile007">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student008">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile008"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tenilda  Calambas Pardo</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34606139</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tenildacalambas2018@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile008">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student009">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile009"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yurany Yesenia Orozco Zambrano </Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1064431832</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yurany281990@gmail.com </Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile009">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Intermediate"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student010">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile010"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jheysson Alexis Mosquera López</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1081157792</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jheyssonmosquera@hotmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile010">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student011">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile011"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaiver Leonel Chagüendo Campo </Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067524354</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jaiverleonelc1@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile011">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#False"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary003"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary001"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary005"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student012">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile012"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maria cristina buitrago</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1062301910</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tinabuitra@gmail.com </Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile012">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Intermediate"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary003"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary001"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary005"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student013">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile013"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martha Cecilia Salzar Sanchez</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34599490</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">macecisa68@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile013">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student014">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile014"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jose Olider Vitonas Rivera</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">76298879</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitonasjov@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile014">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary003"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary001"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary005"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student015">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile015"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yisel ipia Taquinas </Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067534284</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">taquinaslesijt315@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile015">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#False"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student016">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile016"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nilson Andrade</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10754950</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thalianaandrade45@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile016">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#False"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student017">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile017"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frank Edinson Valencia Fiscue</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4784657</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">freval40@hotmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile017">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student018">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile018"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norma Lizeth GUTIERREZ </Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1114888022</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normix136@hotmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile018">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary003"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary001"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary005"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student019">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile019"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruby Alba Mesa Mesa</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34603150</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rubyme2011@hotmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile019">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student020">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile020"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandra Milena Salazar Sanchez</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25733480</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">salazarsanchezsandramilena@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile020">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student021">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile021"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlos Arturo Ortiz</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">76210146</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cao1toribio@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile021">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student022">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile022"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GISELLA SALAZAR PITO</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067527945</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gisalpit@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile022">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#False"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student023">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile023"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inirida Camayo Pillimue</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1062288004</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iniridacamayo77@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile023">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#False"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student024">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile024"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DIDIANA JIMÉNEZ IPIA </Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25734150</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">didijimezipia@gmail.com </Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile024">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary003"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary001"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary005"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student025">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile025"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jorge Anderson Betancourt Ul</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">162298256</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jabu.anderson256@hotmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile025">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary003"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary001"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary005"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student026">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile026"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johan Ortega</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1062328357</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johan21Ortega@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile026">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Intermediate"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student027">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile027"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cristian Orejuela Salazar</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1062294956</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ores90@hotmail.es</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile027">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary003"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary001"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary005"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student028">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile028"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sergio Luis Herrera </Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1062303378</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sh7zamora@gmail.com </Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile028">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary003"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary001"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary005"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student029">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile029"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michell Johan Ramos Ortega</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1062328357</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">johan21ortega@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile029">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Intermediate"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student030">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile030"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inírida Camayo Pillimue</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1062288004</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iniridacamayo77@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile030">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary003"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary001"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary005"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student031">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile031"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jose Olider Vitonas Rivera</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">76298879</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitonasjov@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile031">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#False"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary003"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary001"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary005"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student032">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile032"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRANK EDINSON VALENCIA FISCUE</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4784657</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">freval40@hotmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile032">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student033">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile033"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosby Edith pito opocue</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25733486</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edithpito@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile033">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#False"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student034">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile034"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosby edith pito opocue</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25733486</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edithpito@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile034">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#False"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student035">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile035"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaiver Leonel Chagüendo Campo </Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067524354</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jaiverleonelc1@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile035">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary003"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary001"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary005"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student036">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile036"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caren Julieth Caicedo </Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28554028</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">concentradosmitolima@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile036">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Rural"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#False"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary003"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary001"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary005"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student037">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile037"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SONIA IDALY  DIAZ ROBLES</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">52129844</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zonia142008@hotmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile037">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Urban"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary004"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary006"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary002"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student038">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile038"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ingrid Paola mora coronado </Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1007295863</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paolamora1995@outlook.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile038">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Urban"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#False"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary004"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary006"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary002"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student039">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile039"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YAIDIVI BELLO PEDRAZA</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1033679979</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YAIBELLO1802@HOTMAIL.COM</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile039">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Urban"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#False"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary004"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary006"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary002"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student040">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile040"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adriana Alicia Pinto Moreno </Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">52950590</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shelsymariam@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile040">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Urban"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary004"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary006"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary002"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student041">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile041"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jenny Marlene Morón Rey </Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1403085</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jenny.moron@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile041">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Urban"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary004"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary006"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary002"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student042">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile042"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marisol Rodríguez Gaitán </Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">52622786</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">marisolyandres0316@gmail.com </Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile042">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Urban"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#False"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary004"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary006"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary002"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#student043">
+  <rdf:type rdf:resource="http://localhost:9000/Student#Student"/>
+  <Stud:HasA rdf:resource="#profile043"/>
+  <Stud:StudentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johanna Milena Amaya Rodríguez</Stud:StudentName>
+  <Stud:Document rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53093724</Stud:Document>
+  <Stud:Mail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">johamilena2013@gmail.com</Stud:Mail>
+  <Stud:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</Stud:Gender>
+  <Stud:AgeRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ages 31 to 35</Stud:AgeRange>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profile043">
+  <rdf:type rdf:resource="#StudentProfile"/>
+  <HasGoals rdf:resource="http://localhost:9000/LearningGoal#Goal001"/>
+  <HasResidence rdf:resource="http://localhost:9000/Residence#Urban"/>
+  <HasStudentType rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+  <HasExp rdf:resource="http://localhost:9000/PreviousExperience#True"/>
+  <HasKnowledge rdf:resource="http://localhost:9000/PreviousKnowledge#Basic"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary004"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary006"/>
+  <RecommendsOne rdf:resource="http://localhost:9000/Itinerary#Itinerary002"/>
+</owl:NamedIndividual>
+
+<swrl:Variable rdf:about="urn:swrl#p"/>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#StudentProfile"/>
+          <swrl:argument1 rdf:resource="urn:swrl#p"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#HasResidence"/>
+              <swrl:argument1 rdf:resource="urn:swrl#p"/>
+              <swrl:argument2 rdf:resource="http://localhost:9000/Residence#Urban"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#HasStudentType"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                  <swrl:argument2 rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#RecommendsOne"/>
+          <swrl:argument1 rdf:resource="urn:swrl#p"/>
+          <swrl:argument2 rdf:resource="http://localhost:9000/Itinerary#Itinerary008"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#RecommendsOne"/>
+              <swrl:argument1 rdf:resource="urn:swrl#p"/>
+              <swrl:argument2 rdf:resource="http://localhost:9000/Itinerary#Itinerary009"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#RecommendsOne"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                  <swrl:argument2 rdf:resource="http://localhost:9000/Itinerary#Itinerary010"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#StudentProfile"/>
+          <swrl:argument1 rdf:resource="urn:swrl#p"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#HasResidence"/>
+              <swrl:argument1 rdf:resource="urn:swrl#p"/>
+              <swrl:argument2 rdf:resource="http://localhost:9000/Residence#Rural"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#HasStudentType"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                  <swrl:argument2 rdf:resource="http://localhost:9000/StudentType#Teacher"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#RecommendsOne"/>
+          <swrl:argument1 rdf:resource="urn:swrl#p"/>
+          <swrl:argument2 rdf:resource="http://localhost:9000/Itinerary#Itinerary007"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#RecommendsOne"/>
+              <swrl:argument1 rdf:resource="urn:swrl#p"/>
+              <swrl:argument2 rdf:resource="http://localhost:9000/Itinerary#Itinerary011"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#RecommendsOne"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                  <swrl:argument2 rdf:resource="http://localhost:9000/Itinerary#Itinerary012"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#StudentProfile"/>
+          <swrl:argument1 rdf:resource="urn:swrl#p"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#HasResidence"/>
+              <swrl:argument1 rdf:resource="urn:swrl#p"/>
+              <swrl:argument2 rdf:resource="http://localhost:9000/Residence#Urban"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#HasStudentType"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                  <swrl:argument2 rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#RecommendsOne"/>
+          <swrl:argument1 rdf:resource="urn:swrl#p"/>
+          <swrl:argument2 rdf:resource="http://localhost:9000/Itinerary#Itinerary002"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#RecommendsOne"/>
+              <swrl:argument1 rdf:resource="urn:swrl#p"/>
+              <swrl:argument2 rdf:resource="http://localhost:9000/Itinerary#Itinerary004"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#RecommendsOne"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                  <swrl:argument2 rdf:resource="http://localhost:9000/Itinerary#Itinerary006"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#StudentProfile"/>
+          <swrl:argument1 rdf:resource="urn:swrl#p"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#HasResidence"/>
+              <swrl:argument1 rdf:resource="urn:swrl#p"/>
+              <swrl:argument2 rdf:resource="http://localhost:9000/Residence#Rural"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#HasStudentType"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                  <swrl:argument2 rdf:resource="http://localhost:9000/StudentType#Familiar"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#RecommendsOne"/>
+          <swrl:argument1 rdf:resource="urn:swrl#p"/>
+          <swrl:argument2 rdf:resource="http://localhost:9000/Itinerary#Itinerary001"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#RecommendsOne"/>
+              <swrl:argument1 rdf:resource="urn:swrl#p"/>
+              <swrl:argument2 rdf:resource="http://localhost:9000/Itinerary#Itinerary003"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#RecommendsOne"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                  <swrl:argument2 rdf:resource="http://localhost:9000/Itinerary#Itinerary005"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+
+</rdf:RDF>

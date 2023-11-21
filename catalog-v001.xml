@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1700175326589" name="http://localhost:9000/Course" uri="Course.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1700175326589" name="http://localhost:9000/Itinerary" uri="Itinerary.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1700175326589" name="http://localhost:9000/LearningGoal" uri="LearningGoal.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1700175326589" name="http://localhost:9000/LearningOutcomes" uri="LearningOutcomes.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1700175326589" name="http://localhost:9000/PreviousExperience" uri="PreviousExperience.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1700175326589" name="http://localhost:9000/PreviousKnowledge" uri="PreviousKnowledge.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1700175326589" name="http://localhost:9000/Residence" uri="Residence.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1700175326589" name="http://localhost:9000/Sequence" uri="Sequence.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1700175326589" name="http://localhost:9000/Student" uri="Student.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1700175326589" name="http://localhost:9000/StudentProfile" uri="StudentProfile.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1700175326589" name="http://localhost:9000/StudentType" uri="StudentType.owl"/>
+    </group>
+</catalog>
